@@ -1,6 +1,6 @@
 import yaml from "./js-yaml.js";
 
-const targetUrl = `https://raw.githubusercontent.com/zxfccmm4/Surge/main/SteveStash.yaml`;
+const targetUrl = `https://raw.githubusercontent.com/Saszr/proxy-server-rule-tools/main/cloudflare-worker-SteveStash/SteveStash.yaml`;
 
 function isURL(str) {
   try {
