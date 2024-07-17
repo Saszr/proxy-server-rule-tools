@@ -11,6 +11,7 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
+      - 分组自动选择
       - 香港节点
       - 台湾节点
       - 狮城节点
@@ -37,6 +38,10 @@ proxy-groups:
     type: select
     proxies:
       - 香港节点-Auto
+      - 狮城节点-Auto
+      - 日本节点-Auto
+      - 台湾节点-Auto
+      - 美国节点-Auto
       - DIRECT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
   - name: 电报消息
@@ -270,6 +275,42 @@ proxy-groups:
     use: [SF]
     filter: 港|🇭🇰|香港|HK|Hong
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+  - name: 日本节点-Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: null
+    filter: 日|🇯🇵|日本|JP|Japan
+    use: [SF]
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+  - name: 美国节点-Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: null
+    filter: 美|🇺🇸|美国|US|States|American
+    use: [SF]
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+  - name: 台湾节点-Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: null
+    filter: 台|🇨🇳|台湾|TW|Tai
+    use: [SF]
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+  - name: 狮城节点-Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: null
+    filter: 坡|🇸🇬|新加坡|狮城|SG|Singapore
+    use: [SF]
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,全球直连
   - DOMAIN-SUFFIX,ip6-localhost,全球直连
