@@ -33,6 +33,12 @@ proxy-groups:
     proxies: null
     use: [SF]
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
+  - name: 分组自动选择
+    type: select
+    proxies:
+      - 香港节点-Auto
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
   - name: 电报消息
     type: select
     proxies:
@@ -255,6 +261,15 @@ proxy-groups:
     filter: 🇬🇧|英国|英|英格兰|UK|United Kingdom
     use: [SF]
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
+  - name: 香港节点-Auto
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: null
+    use: [SF]
+    filter: 港|🇭🇰|香港|HK|Hong
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,全球直连
   - DOMAIN-SUFFIX,ip6-localhost,全球直连
@@ -8259,6 +8274,6 @@ rules:
   - DOMAIN-KEYWORD,speedtest,Speedtest
   - GEOIP,CN,全球直连
   - MATCH,漏网之鱼
-proxy-providers: {SF: {interval: 0, url: '订阅链接'}}
+proxy-providers: { SF: { interval: 0, url: "订阅链接" } }
 dns: {}
 subscribe-url: 换成你的订阅链接
